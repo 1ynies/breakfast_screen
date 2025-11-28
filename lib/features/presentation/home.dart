@@ -1,7 +1,7 @@
-import 'package:breakfast_app/Widgets/category_card.dart';
-import 'package:breakfast_app/Widgets/recommendation_diet_widget.dart';
-import 'package:breakfast_app/models/category_model.dart';
-import 'package:breakfast_app/models/recommendation_model.dart';
+import 'package:breakfast_app/features/presentation/Widgets/category_card.dart';
+import 'package:breakfast_app/features/presentation/Widgets/recommendation_diet_widget.dart';
+import 'package:breakfast_app/features/models/category_model.dart';
+import 'package:breakfast_app/features/models/recommendation_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:google_fonts/google_fonts.dart';

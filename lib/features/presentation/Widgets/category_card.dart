@@ -1,4 +1,4 @@
-import 'package:breakfast_app/models/category_model.dart';
+import 'package:breakfast_app/features/models/category_model.dart';
 import 'package:flutter/material.dart';
 
 // --- Custom Widget for Each Item ---

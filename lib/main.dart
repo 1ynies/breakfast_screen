@@ -1,4 +1,4 @@
-import 'package:breakfast_app/home.dart';
+import 'package:breakfast_app/features/presentation/home.dart';
 import 'package:flutter/material.dart';
 
 void main() {
