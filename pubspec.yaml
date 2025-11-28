@@ -65,6 +65,11 @@ flutter:
     - lib/assets/svg/dots.svg
     - lib/assets/svg/search.svg
     - lib/assets/svg/funnel.svg
+    - lib/assets/cake.png
+    - lib/assets/honey_pancake.png
+    - lib/assets/pie.png
+    - lib/assets/salade.png
+    - lib/assets/smoothy.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images
