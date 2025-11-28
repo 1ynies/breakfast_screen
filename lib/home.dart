@@ -14,10 +14,8 @@ class Homepage extends StatefulWidget {
 }
 
 class _HomepageState extends State<Homepage> {
-  // 1. State variable to hold the list of categories
   List<CategoryModel> categories = [];
 
-  // Function to fetch the data
   void _getCategories() {
     categories = CategoryModel.getCategories();
   }
@@ -29,8 +27,8 @@ class _HomepageState extends State<Homepage> {
 
   @override
   void initState() {
-    // 2. Initialize the data when the widget is created
     _getCategories();
+    _getRecommendations();
     super.initState();
   }
 
@@ -76,6 +74,21 @@ class _HomepageState extends State<Homepage> {
               ),
               const SizedBox(height: 18),
               _horizontalRecommendationDietList(),
+              const SizedBox(height: 18),
+              Padding(
+                padding: const EdgeInsets.only(left: 20),
+                child: Text(
+                  'Popular ',
+                  style: GoogleFonts.manrope(
+                    textStyle: const TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.w600,
+                    ),
+                  ),
+                ),
+              ),
+              const SizedBox(height: 18),
+
             ],
           ),
         ],
@@ -103,12 +116,11 @@ class _HomepageState extends State<Homepage> {
   // -- Horizontal Recommendation Diet List --
   Widget _horizontalRecommendationDietList() {
     return SizedBox(
-      height: 200, // REQUIRED: Horizontal ListView must have a defined height
+      height: 250, // REQUIRED: Horizontal ListView must have a defined height
       child: ListView.builder(
         scrollDirection: Axis.horizontal, // This makes it scroll horizontally
         itemCount: recommendations.length,
         itemBuilder: (context, index) {
-          // Pass the single category object to the CategoryCard
           return RecommendationDietCard(recommendation: recommendations[index]);
         },
         // We only need padding on the outside edge now

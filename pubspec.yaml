@@ -70,6 +70,7 @@ flutter:
     - lib/assets/pie.png
     - lib/assets/salade.png
     - lib/assets/smoothy.png
+    - lib/assets/french_toast.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images

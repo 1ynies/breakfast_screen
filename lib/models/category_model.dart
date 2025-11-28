@@ -18,21 +18,21 @@ class CategoryModel {
       CategoryModel(
         title: 'Salade',
         iconPath: 'lib/assets/salade.png',
-        boxColor: const Color(0xFFFCE7F3),
+        boxColor: const Color(0xFFFCE7F3).withOpacity(0.8),
       ),
     );
     categories.add(
       CategoryModel(
         title: 'Pie',
         iconPath: 'lib/assets/pie.png',
-        boxColor: const Color(0xFFF3E8FF),
+        boxColor: const Color(0xFFF3E8FF).withOpacity(0.8),
       ),
     );
     categories.add(
       CategoryModel(
         title: 'Smoothies',
         iconPath: 'lib/assets/smoothy.png',
-        boxColor: const Color(0xFFFCE7F3),
+        boxColor: const Color(0xFFFCE7F3).withOpacity(0.8),
       ),
     );
     categories.add(
