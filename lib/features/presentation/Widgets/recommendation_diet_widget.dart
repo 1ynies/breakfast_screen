@@ -67,7 +67,7 @@ class RecommendationDietCard extends StatelessWidget {
                   alignment: Alignment.center,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(25),
-                    color: recommendation.buttonColor ?? Colors.white,
+                    color: recommendation.buttonColor ,
                   ),
 
                   child: Text(
