@@ -1,4 +1,6 @@
+import 'package:breakfast_app/features/models/popular_model.dart';
 import 'package:breakfast_app/features/presentation/Widgets/category_card.dart';
+import 'package:breakfast_app/features/presentation/Widgets/popular_card.dart';
 import 'package:breakfast_app/features/presentation/Widgets/recommendation_diet_widget.dart';
 import 'package:breakfast_app/features/models/category_model.dart';
 import 'package:breakfast_app/features/models/recommendation_model.dart';
@@ -25,10 +27,16 @@ class _HomepageState extends State<Homepage> {
     recommendations = RecommendationModel.getRecommendations();
   }
 
+  List<PopularModel> populars = [];
+  void _getpopulars() {
+    populars = PopularModel.getpopular();
+  }
+
   @override
   void initState() {
     _getCategories();
     _getRecommendations();
+    _getpopulars();
     super.initState();
   }
 
@@ -37,61 +45,65 @@ class _HomepageState extends State<Homepage> {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: appBar(),
-      body: Column(
-        children: [
-          SearchField(),
-          const SizedBox(height: 20),
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Padding(
-                padding: const EdgeInsets.only(left: 20),
-                child: Text(
-                  'Categories',
-                  style: GoogleFonts.manrope(
-                    textStyle: const TextStyle(
-                      fontSize: 20,
-                      fontWeight: FontWeight.w600,
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            SearchField(),
+            const SizedBox(height: 10),
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Padding(
+                  padding: const EdgeInsets.only(left: 20),
+                  child: Text(
+                    'Categories',
+                    style: GoogleFonts.manrope(
+                      textStyle: const TextStyle(
+                        fontSize: 20,
+                        fontWeight: FontWeight.w600,
+                      ),
                     ),
                   ),
                 ),
-              ),
-              const SizedBox(height: 18),
-              // --  Call the function to build the horizontal list --
-              _horizontalCategoryList(),
-              const SizedBox(height: 18),
-              Padding(
-                padding: const EdgeInsets.only(left: 20),
-                child: Text(
-                  'Recommendation \n for Diet ',
-                  style: GoogleFonts.manrope(
-                    textStyle: const TextStyle(
-                      fontSize: 20,
-                      fontWeight: FontWeight.w600,
+                const SizedBox(height: 18),
+                // --  Call the function to build the horizontal list --
+                _horizontalCategoryList(),
+                const SizedBox(height: 18),
+                Padding(
+                  padding: const EdgeInsets.only(left: 20),
+                  child: Text(
+                    'Recommendation \n for Diet ',
+                    style: GoogleFonts.manrope(
+                      textStyle: const TextStyle(
+                        fontSize: 20,
+                        fontWeight: FontWeight.w600,
+                      ),
                     ),
                   ),
                 ),
-              ),
-              const SizedBox(height: 18),
-              _horizontalRecommendationDietList(),
-              const SizedBox(height: 18),
-              Padding(
-                padding: const EdgeInsets.only(left: 20),
-                child: Text(
-                  'Popular ',
-                  style: GoogleFonts.manrope(
-                    textStyle: const TextStyle(
-                      fontSize: 20,
-                      fontWeight: FontWeight.w600,
+                const SizedBox(height: 18),
+                // --  Call the function to build the horizontal list --
+                _horizontalRecommendationDietList(),
+                const SizedBox(height: 18),
+                Padding(
+                  padding: const EdgeInsets.only(left: 20),
+                  child: Text(
+                    'Popular ',
+                    style: GoogleFonts.manrope(
+                      textStyle: const TextStyle(
+                        fontSize: 20,
+                        fontWeight: FontWeight.w600,
+                      ),
                     ),
                   ),
                 ),
-              ),
-              const SizedBox(height: 18),
-
-            ],
-          ),
-        ],
+                const SizedBox(height: 18),
+                // --  Call the function to build the horizontal list --
+               _verticalpopularlist(),
+              ],
+            ),
+          ],
+        ),
       ),
     );
   }
@@ -125,6 +137,21 @@ class _HomepageState extends State<Homepage> {
         },
         // We only need padding on the outside edge now
         padding: const EdgeInsets.symmetric(horizontal: 12.5),
+      ),
+    );
+  }
+
+  Widget _verticalpopularlist() {
+    return SizedBox(
+      height: 400,
+      child: ListView.builder(
+          itemCount: populars.length,
+          itemBuilder: (context, index) {
+            return PopularCard(populars: populars[index]);
+          },
+          // We only need padding on the outside edge now
+          // padding: const EdgeInsets.symmetric(horizontal: 12.5),
+        
       ),
     );
   }

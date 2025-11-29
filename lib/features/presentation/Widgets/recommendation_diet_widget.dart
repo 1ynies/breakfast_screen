@@ -52,30 +52,29 @@ class RecommendationDietCard extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 10),
-            Expanded(
+
+            SizedBox(
+              height: 50,
               child: InkWell(
                 onTap: () {
                   // -- to be implemented later ---
                 },
-                child: SizedBox(
-                  width: 100, // <-- Set your desired width here
-                  height: 10,
-                  child: Container(
-                    padding: EdgeInsets.symmetric(horizontal: 10.0),
 
-                    height: 10,
-                    alignment: Alignment.center,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(10),
-                      color: recommendation.buttonColor ?? Colors.white,
-                    ),
+                child: Container(
+                  padding: EdgeInsets.symmetric(horizontal: 10.0),
+                  margin: EdgeInsets.only(left: 20,right: 20),
 
-                    child: Text(
-                      textAlign: TextAlign.center,
-                      'View',
-                      style: GoogleFonts.manrope(
-                        textStyle: TextStyle(color: Colors.white),
-                      ),
+                  alignment: Alignment.center,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(25),
+                    color: recommendation.buttonColor ?? Colors.white,
+                  ),
+
+                  child: Text(
+                    textAlign: TextAlign.center,
+                    'View',
+                    style: GoogleFonts.manrope(
+                      textStyle: TextStyle(color: Colors.white),
                     ),
                   ),
                 ),

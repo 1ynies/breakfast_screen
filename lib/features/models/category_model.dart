@@ -14,34 +14,37 @@ class CategoryModel {
   // Static method to provide the list of categories
   static List<CategoryModel> getCategories() {
     List<CategoryModel> categories = [];
+
+    categories.add(
+      CategoryModel(
+        title: 'Cake',
+        iconPath: 'lib/assets/cake.png',
+       boxColor: const Color(0xCCFCE7F3),
+      ),
+    );
     categories.add(
       CategoryModel(
         title: 'Salade',
         iconPath: 'lib/assets/salade.png',
-        boxColor: const Color(0xFFFCE7F3).withOpacity(0.8),
+        boxColor: const Color(0xCCF3E8FF),
       ),
     );
     categories.add(
       CategoryModel(
         title: 'Pie',
         iconPath: 'lib/assets/pie.png',
-        boxColor: const Color(0xFFF3E8FF).withOpacity(0.8),
+        boxColor: const Color(0xCCFCE7F3),
+        
       ),
     );
     categories.add(
       CategoryModel(
         title: 'Smoothies',
         iconPath: 'lib/assets/smoothy.png',
-        boxColor: const Color(0xFFFCE7F3).withOpacity(0.8),
+        boxColor: const Color(0xCCF3E8FF),
       ),
     );
-    categories.add(
-      CategoryModel(
-        title: 'Cake',
-        iconPath: 'lib/assets/cake.png',
-        boxColor: const Color(0xFFF3E8FF),
-      ),
-    );
+    
     return categories;
   }
 }
