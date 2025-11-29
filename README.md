@@ -4,26 +4,9 @@
 
 <table width ='100%'>
     <tr>
-        <td  width='50%'>
-        <img src ='Screenshots/Screenshot.png'>
-        </td>
         <td>
         A Flutter project showcasing a beautiful and clean user interface for a breakfast recipe or food ordering application. This project is a great example of how to build custom widgets, create horizontal list views, and structure a Flutter application for scalability.
-        </td>
-    </tr>
-</table>
-
-
-## 📸 Screenshots
-
-*(Add screenshots of the app's home screen here to give a visual representation of the UI.)*
-
-
-*A placeholder for your app's screenshot. Replace `placeholder.png` with an actual image file in your project.*
-
----
-
-## ✨ Features
+        ## ✨ Features
 
 - **Custom App Bar:** A clean app bar with leading and trailing icon buttons.
 - **Styled Search Bar:** A search input field with a shadow, rounded corners, and prefix/suffix icons.
@@ -34,6 +17,18 @@
 - **Custom Fonts and Icons:** Utilizes Google Fonts (`Manrope`) and SVG icons for a polished look.
 
 ---
+        </td>
+        <td  width='50%'>
+        <img src ='Screenshots/Screenshot.png'>
+        </td>
+        
+    </tr>
+</table>
+
+
+
+
+
 
 ## 🚀 Getting Started
 
