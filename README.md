@@ -6,17 +6,6 @@
     <tr>
         <td>
         A Flutter project showcasing a beautiful and clean user interface for a breakfast recipe or food ordering application. This project is a great example of how to build custom widgets, create horizontal list views, and structure a Flutter application for scalability.
-        ## ✨ Features
-
-- **Custom App Bar:** A clean app bar with leading and trailing icon buttons.
-- **Styled Search Bar:** A search input field with a shadow, rounded corners, and prefix/suffix icons.
-- **Horizontal Category List:** A scrollable horizontal list displaying food categories with custom card designs.
-- **Horizontal Recommendation List:** A scrollable horizontal list showcasing recommended diet plans with images, details, and a call-to-action button.
-- **Custom Widgets:** The UI is built using modular and reusable widgets for categories (`CategoryCard`) and recommendations (`RecommendationDietCard`).
-- **Clean Code Architecture:** The project is structured with separate directories for models, widgets, and screens.
-- **Custom Fonts and Icons:** Utilizes Google Fonts (`Manrope`) and SVG icons for a polished look.
-
----
         </td>
         <td  width='50%'>
         <img src ='Screenshots/Screenshot.png'>
@@ -28,7 +17,17 @@
 
 
 
+## ✨ Features
 
+- **Custom App Bar:** A clean app bar with leading and trailing icon buttons.
+- **Styled Search Bar:** A search input field with a shadow, rounded corners, and prefix/suffix icons.
+- **Horizontal Category List:** A scrollable horizontal list displaying food categories with custom card designs.
+- **Horizontal Recommendation List:** A scrollable horizontal list showcasing recommended diet plans with images, details, and a call-to-action button.
+- **Custom Widgets:** The UI is built using modular and reusable widgets for categories (`CategoryCard`) and recommendations (`RecommendationDietCard`).
+- **Clean Code Architecture:** The project is structured with separate directories for models, widgets, and screens.
+- **Custom Fonts and Icons:** Utilizes Google Fonts (`Manrope`) and SVG icons for a polished look.
+
+---
 
 ## 🚀 Getting Started
 
