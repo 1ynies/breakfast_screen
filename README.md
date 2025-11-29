@@ -1,6 +1,18 @@
 # Breakfast App UI
 
-A Flutter project showcasing a beautiful and clean user interface for a breakfast recipe or food ordering application. This project is a great example of how to build custom widgets, create horizontal list views, and structure a Flutter application for scalability.
+
+
+<table width ='100%'>
+    <tr>
+        <td  width='50%'>
+        <img src ='Screenshots/Screenshot.png'>
+        </td>
+        <td>
+        A Flutter project showcasing a beautiful and clean user interface for a breakfast recipe or food ordering application. This project is a great example of how to build custom widgets, create horizontal list views, and structure a Flutter application for scalability.
+        </td>
+    </tr>
+</table>
+
 
 ## 📸 Screenshots
 

@@ -10,12 +10,11 @@ class PopularCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-
-      height: 170,
+      height: 140,
       width: double.infinity,
       child: Container(
-        
-        margin: EdgeInsets.all(10),
+        margin: EdgeInsets.only(left: 15 ,right: 15,bottom: 18),
+        padding: EdgeInsets.all(10),
         decoration: BoxDecoration(
           color: Colors.white,
           borderRadius: BorderRadius.circular(30),
@@ -32,15 +31,34 @@ class PopularCard extends StatelessWidget {
           ],
         ),
         child: Row(
-          children: [
-            Image.asset(populars.iconPath, width: 30, height: 30),
-            Column(
-              children: [
-                Text(populars.title, style: GoogleFonts.manrope()),
-                Text(populars.info),
-              ],
+          children: <Widget>[
+            Image.asset(populars.iconPath, width: 60, height: 60),
+            const SizedBox(width: 10),
+            Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  Text(
+                    populars.title,
+                    style: GoogleFonts.manrope(
+                      textStyle: TextStyle(
+                        fontSize: 18,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.black87,
+                      ),
+                    ),
+                  ),
+                  Text(
+                    populars.info,
+                    style: GoogleFonts.manrope(
+                      textStyle: TextStyle(fontSize: 14, color: Colors.grey),
+                    ),
+                  ),
+                ],
+              ),
             ),
-      
+
             SvgPicture.asset('lib/assets/svg/arrow_right.svg'),
           ],
         ),
